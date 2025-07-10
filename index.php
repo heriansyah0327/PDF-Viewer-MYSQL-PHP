@@ -91,10 +91,7 @@
   <div class="container">
     <h1>Daftar PDF</h1>
     <?php
-<<<<<<< HEAD
       date_default_timezone_set('Asia/Jakarta');
-=======
->>>>>>> 153aee5509301b4a9c7a40f8c6e069dbc8ed64bd
       include 'db.php';
       $result = $conn->query("SELECT * FROM files ORDER BY uploaded_at DESC");
       if ($result->num_rows > 0) {
@@ -103,14 +100,10 @@
           $fileName = htmlspecialchars($row['file_name']);
           echo "
             <div class='file-card'>
-<<<<<<< HEAD
               <a href='viewer.php?file=" . urlencode($fileUrl) . "' target='' class='file-name'>$fileName</a>
               <div style='font-size: 14px; color: #666; text-align: right; white-space: nowrap;'>
                 " . date('d M Y, H:i', strtotime($row['uploaded_at'])) . "
               </div>
-=======
-              <a href='viewer.php?file=" . urlencode($fileUrl) . "' target='_blank' class='file-name'>$fileName</a>
->>>>>>> 153aee5509301b4a9c7a40f8c6e069dbc8ed64bd
             </div>
           ";
         }
